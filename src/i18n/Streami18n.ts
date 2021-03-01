@@ -1,16 +1,11 @@
-import i18n, { TFunction } from 'i18next';
 import Dayjs from 'dayjs';
 import calendar from 'dayjs/plugin/calendar';
-import updateLocale from 'dayjs/plugin/updateLocale';
-import LocalizedFormat from 'dayjs/plugin/localizedFormat';
 import localeData from 'dayjs/plugin/localeData';
+import LocalizedFormat from 'dayjs/plugin/localizedFormat';
 import relativeTime from 'dayjs/plugin/relativeTime';
-
+import updateLocale from 'dayjs/plugin/updateLocale';
+import i18n, { TFunction } from 'i18next';
 import type { TranslationLanguages } from 'stream-chat';
-
-import type { TDateTimeParser } from '../context/TranslationContext';
-
-import type { UnknownType } from '../../types/types';
 
 import {
   enTranslations,
@@ -21,6 +16,9 @@ import {
   ruTranslations,
   trTranslations,
 } from './translations';
+
+import type { UnknownType } from '../../types/types';
+import type { TDateTimeParser } from '../context/TranslationContext';
 
 const defaultNS = 'translation';
 const defaultLng = 'en';

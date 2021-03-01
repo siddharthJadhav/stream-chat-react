@@ -1,5 +1,11 @@
 import React, { useContext } from 'react';
+
 import type { MessageResponse } from 'stream-chat';
+
+import { useOpenThreadHandler, useUserRole } from './hooks';
+import { ReactionIcon, ThreadIcon } from './icons';
+import { MESSAGE_ACTIONS } from './utils';
+
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -11,9 +17,6 @@ import type {
 } from '../../../types/types';
 import { ChannelContext } from '../../context';
 import { MessageActions } from '../MessageActions';
-import { useOpenThreadHandler, useUserRole } from './hooks';
-import { ReactionIcon, ThreadIcon } from './icons';
-import { MESSAGE_ACTIONS } from './utils';
 
 export interface MessageOptionsProps<
   At extends UnknownType = DefaultAttachmentType,

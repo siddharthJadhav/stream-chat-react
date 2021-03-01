@@ -1,7 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
+
 import * as sanitizeUrl from '@braintree/sanitize-url';
+import { render } from '@testing-library/react';
+
+import '@testing-library/jest-dom';
 
 import SafeAnchor from '../SafeAnchor';
 

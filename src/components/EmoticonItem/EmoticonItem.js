@@ -1,5 +1,6 @@
 // @ts-check
 import React from 'react';
+
 import PropTypes from 'prop-types';
 
 /** @type {React.FC<import("types").EmoticonItemProps>} */

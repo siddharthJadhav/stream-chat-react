@@ -1,5 +1,3 @@
-import { useChatContext } from '../../../context/ChatContext';
-
 import type { StreamChat, UpdatedMessage } from 'stream-chat';
 
 import type {
@@ -12,6 +10,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { useChatContext } from '../../../context/ChatContext';
 
 type UpdateHandler<
   At extends UnknownType = DefaultAttachmentType,

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { cleanup, fireEvent, render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
 import {
   emojiMockConfig,
@@ -11,9 +13,9 @@ import {
 } from 'mock-builders';
 
 import { ChannelContext } from '../../../context';
-import MessageCommerce from '../MessageCommerce';
 import { Avatar as AvatarMock } from '../../Avatar';
 import { MML as MMLMock } from '../../MML';
+import MessageCommerce from '../MessageCommerce';
 import { MessageText as MessageTextMock } from '../MessageText';
 
 jest.mock('../../Avatar', () => ({ Avatar: jest.fn(() => <div />) }));

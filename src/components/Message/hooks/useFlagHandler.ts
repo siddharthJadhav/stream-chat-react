@@ -1,10 +1,6 @@
 import type { MouseEvent } from 'react';
+
 import type { MessageResponse } from 'stream-chat';
-
-import { validateAndGetMessage } from '../utils';
-
-import { useChatContext } from '../../../context/ChatContext';
-import { useTranslationContext } from '../../../context/TranslationContext';
 
 import type {
   DefaultAttachmentType,
@@ -16,6 +12,9 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { useChatContext } from '../../../context/ChatContext';
+import { useTranslationContext } from '../../../context/TranslationContext';
+import { validateAndGetMessage } from '../utils';
 
 export const missingUseFlagHandlerParameterWarning =
   'useFlagHandler was called but it is missing one or more necessary parameters.';

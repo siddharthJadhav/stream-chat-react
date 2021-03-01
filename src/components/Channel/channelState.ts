@@ -1,11 +1,10 @@
 import type { Reducer } from 'react';
+
 import type {
   Channel,
   MessageResponse,
   ChannelState as StreamChannelState,
 } from 'stream-chat';
-
-import type { ChannelState } from '../../context/ChannelContext';
 
 import type {
   DefaultAttachmentType,
@@ -17,6 +16,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import type { ChannelState } from '../../context/ChannelContext';
 
 export type ChannelStateReducerAction<
   At extends UnknownType = DefaultAttachmentType,

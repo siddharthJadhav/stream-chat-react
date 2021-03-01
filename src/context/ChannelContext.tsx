@@ -18,8 +18,6 @@ import type {
   UserResponse,
 } from 'stream-chat';
 
-import type { ChannelStateReducerAction } from '../components/Channel/channelState';
-
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -30,6 +28,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../types/types';
+import type { ChannelStateReducerAction } from '../components/Channel/channelState';
 
 export type CommonEmoji = {
   custom: boolean;

@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 
-import { useChatContext } from '../../../context/ChatContext';
-
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -12,6 +10,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { useChatContext } from '../../../context/ChatContext';
 
 export const useConnectionRecoveredListener = <
   At extends UnknownType = DefaultAttachmentType,

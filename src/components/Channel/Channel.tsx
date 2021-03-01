@@ -6,12 +6,19 @@ import React, {
   useReducer,
   useRef,
 } from 'react';
+
+import type {
+  Data as EmojiMartData,
+  NimbleEmojiIndex,
+  NimbleEmojiProps,
+  NimblePickerProps,
+} from 'emoji-mart';
 // @ts-expect-error
 import DefaultEmoji from 'emoji-mart/dist-modern/components/emoji/nimble-emoji';
 // @ts-expect-error
-import DefaultEmojiIndex from 'emoji-mart/dist-modern/utils/emoji-index/nimble-emoji-index';
-// @ts-expect-error
 import DefaultEmojiPicker from 'emoji-mart/dist-modern/components/picker/nimble-picker';
+// @ts-expect-error
+import DefaultEmojiIndex from 'emoji-mart/dist-modern/utils/emoji-index/nimble-emoji-index';
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
 import {
@@ -42,32 +49,6 @@ import {
   useMentionsHandlers,
 } from './hooks/useMentionsHandlers';
 
-import { Attachment as DefaultAttachment } from '../Attachment';
-import {
-  LoadingErrorIndicator as DefaultLoadingErrorIndicator,
-  LoadingIndicator as DefaultLoadingIndicator,
-  LoadingErrorIndicatorProps,
-  LoadingIndicatorProps,
-} from '../Loading';
-import { MessageSimple } from '../Message';
-
-import {
-  ChannelContextValue,
-  ChannelProvider,
-  MessageAttachments,
-  MessageToSend,
-} from '../../context/ChannelContext';
-import { useChatContext } from '../../context/ChatContext';
-import { useTranslationContext } from '../../context/TranslationContext';
-import defaultEmojiData from '../../stream-emoji.json';
-
-import type {
-  Data as EmojiMartData,
-  NimbleEmojiIndex,
-  NimbleEmojiProps,
-  NimblePickerProps,
-} from 'emoji-mart';
-
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -78,6 +59,23 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import {
+  ChannelContextValue,
+  ChannelProvider,
+  MessageAttachments,
+  MessageToSend,
+} from '../../context/ChannelContext';
+import { useChatContext } from '../../context/ChatContext';
+import { useTranslationContext } from '../../context/TranslationContext';
+import defaultEmojiData from '../../stream-emoji.json';
+import { Attachment as DefaultAttachment } from '../Attachment';
+import {
+  LoadingErrorIndicator as DefaultLoadingErrorIndicator,
+  LoadingIndicator as DefaultLoadingIndicator,
+  LoadingErrorIndicatorProps,
+  LoadingIndicatorProps,
+} from '../Loading';
+import { MessageSimple } from '../Message';
 
 export type ChannelProps<
   At extends UnknownType = DefaultAttachmentType,

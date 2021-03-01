@@ -1,16 +1,20 @@
 import React from 'react';
+
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
+
 import { cleanup, render } from '@testing-library/react';
+import Dayjs from 'dayjs';
+import calendar from 'dayjs/plugin/calendar';
+
 import { generateMessage } from 'mock-builders';
+
+import { TranslationContext } from '../../../context';
 import {
   defaultTimestampFormat,
   MessageTimestamp,
   notValidDateWarning,
 } from '../MessageTimestamp';
-import { TranslationContext } from '../../../context';
-import Dayjs from 'dayjs';
-import calendar from 'dayjs/plugin/calendar';
 
 Dayjs.extend(calendar);
 

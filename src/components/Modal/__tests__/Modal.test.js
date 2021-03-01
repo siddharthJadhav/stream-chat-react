@@ -1,6 +1,8 @@
 import React from 'react';
-import { cleanup, fireEvent, render } from '@testing-library/react';
+
 import renderer from 'react-test-renderer';
+
+import { cleanup, fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import { Modal } from '../Modal';

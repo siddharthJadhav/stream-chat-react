@@ -1,14 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-import { Message } from '../Message';
-import { MessageInput, MessageInputSmall } from '../MessageInput';
-import { MessageList } from '../MessageList';
-
-import { useChannelContext } from '../../context/ChannelContext';
-import { useChatContext } from '../../context/ChatContext';
-import { useTranslationContext } from '../../context/TranslationContext';
-import { smartRender } from '../../utils';
-
 import type { TFunction } from 'i18next';
 import type { ChannelState, MessageResponse } from 'stream-chat';
 
@@ -22,6 +13,13 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import { useChannelContext } from '../../context/ChannelContext';
+import { useChatContext } from '../../context/ChatContext';
+import { useTranslationContext } from '../../context/TranslationContext';
+import { smartRender } from '../../utils';
+import { Message } from '../Message';
+import { MessageInput, MessageInputSmall } from '../MessageInput';
+import { MessageList } from '../MessageList';
 
 export type ThreadProps<
   At extends UnknownType = DefaultAttachmentType,

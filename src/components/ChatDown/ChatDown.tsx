@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { LoadingChannels } from '../Loading/LoadingChannels';
-
 import placeholder from '../../assets/str-chat__connection-error.svg';
 import { useTranslationContext } from '../../context/TranslationContext';
+import { LoadingChannels } from '../Loading/LoadingChannels';
 
 export type ChatDownProps = {
   /** The type of error */

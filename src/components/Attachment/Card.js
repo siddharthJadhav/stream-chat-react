@@ -1,5 +1,6 @@
 // @ts-check
 import React, { useContext } from 'react';
+
 import PropTypes from 'prop-types';
 
 import giphyLogo from '../../assets/Poweredby_100px-White_VertText.png';

@@ -1,4 +1,5 @@
 import deepequal from 'react-fast-compare';
+
 import PropTypes from 'prop-types';
 import type {
   Attachment,
@@ -11,6 +12,7 @@ import type {
   StreamChatReactUserType,
   TranslationContextValue,
 } from 'types';
+
 import type { MessageComponentProps } from './Message';
 
 /**

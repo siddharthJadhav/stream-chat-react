@@ -1,12 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Textarea from 'react-textarea-autosize';
-import getCaretCoordinates from 'textarea-caret';
-import CustomEvent from 'custom-event';
+
 import { isValidElementType } from 'react-is';
 
-import Listeners, { KEY_CODES } from './listener';
+import Textarea from 'react-textarea-autosize';
+
+import CustomEvent from 'custom-event';
+import PropTypes from 'prop-types';
+
+import getCaretCoordinates from 'textarea-caret';
+
 import DefaultSuggestionList from './List';
+import Listeners, { KEY_CODES } from './listener';
 import {
   DEFAULT_CARET_POSITION,
   defaultScrollToItem,

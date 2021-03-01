@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
+
 import { fireEvent, render, waitFor } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
-import { Channel } from '../Channel';
-import { Chat } from '../../Chat';
 import { ChannelContext, ChatContext } from '../../../context';
 import {
   generateChannel,
@@ -15,7 +15,9 @@ import {
   threadRepliesApi,
   useMockedApis,
 } from '../../../mock-builders';
+import { Chat } from '../../Chat';
 import { LoadingErrorIndicator } from '../../Loading';
+import { Channel } from '../Channel';
 
 jest.mock('../../Loading', () => ({
   LoadingErrorIndicator: jest.fn(() => <div />),

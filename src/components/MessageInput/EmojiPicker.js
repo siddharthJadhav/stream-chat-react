@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+
 import { ChannelContext, TranslationContext } from '../../context';
 
 /** @type { (emoji: import('emoji-mart').EmojiData) => boolean } */

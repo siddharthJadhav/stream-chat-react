@@ -1,8 +1,9 @@
 import React, { useContext, useMemo } from 'react';
+
 import PropTypes from 'prop-types';
 
-import { getStrippedEmojiData } from '../Channel/emojiData';
 import { ChannelContext } from '../../context';
+import { getStrippedEmojiData } from '../Channel/emojiData';
 
 /** @type {React.FC<import("types").ReactionsListProps>} */
 const ReactionsList = ({

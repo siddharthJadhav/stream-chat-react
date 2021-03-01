@@ -1,9 +1,11 @@
 // @ts-check
 import React, { FC, useContext, useEffect, useState } from 'react';
+
 import type { Event } from 'stream-chat';
 
-import { ChatContext, TranslationContext } from '../../context';
 import { CustomNotification } from './CustomNotification';
+
+import { ChatContext, TranslationContext } from '../../context';
 
 const UnMemoizedConnectionStatus: FC = () => {
   const { client } = useContext(ChatContext);

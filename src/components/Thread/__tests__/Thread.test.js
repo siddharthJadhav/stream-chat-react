@@ -1,6 +1,9 @@
 import React from 'react';
+
 import renderer from 'react-test-renderer';
+
 import { fireEvent, render, waitFor } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
 import {
   generateChannel,
@@ -10,11 +13,12 @@ import {
   getTestClientWithUser,
   useMockedApis,
 } from 'mock-builders';
-import { Message as MessageMock } from '../../Message';
-import { MessageList as MessageListMock } from '../../MessageList';
-import { MessageInput as MessageInputMock } from '../../MessageInput';
-import { Thread } from '../Thread';
+
 import { ChannelContext, TranslationContext } from '../../../context';
+import { Message as MessageMock } from '../../Message';
+import { MessageInput as MessageInputMock } from '../../MessageInput';
+import { MessageList as MessageListMock } from '../../MessageList';
+import { Thread } from '../Thread';
 
 jest.mock('../../Message', () => ({
   Message: jest.fn(() => <div />),

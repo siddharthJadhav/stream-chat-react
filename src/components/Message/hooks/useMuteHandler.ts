@@ -1,10 +1,5 @@
-import { isUserMuted, validateAndGetMessage } from '../utils';
-
-import { useChannelContext } from '../../../context/ChannelContext';
-import { useChatContext } from '../../../context/ChatContext';
-import { useTranslationContext } from '../../../context/TranslationContext';
-
 import type { MouseEvent } from 'react';
+
 import type { MessageResponse, UserResponse } from 'stream-chat';
 
 import type {
@@ -17,6 +12,10 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { useChannelContext } from '../../../context/ChannelContext';
+import { useChatContext } from '../../../context/ChatContext';
+import { useTranslationContext } from '../../../context/TranslationContext';
+import { isUserMuted, validateAndGetMessage } from '../utils';
 
 export const missingUseMuteHandlerParamsWarning =
   'useMuteHandler was called but it is missing one or more necessary parameter.';

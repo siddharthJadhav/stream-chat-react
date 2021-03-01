@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+
 import {
   act,
   cleanup,
@@ -6,14 +7,9 @@ import {
   render,
   waitFor,
 } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
-import MessageInput from '../MessageInput';
-import MessageInputLarge from '../MessageInputLarge';
-import MessageInputSmall from '../MessageInputSmall';
-import MessageInputFlat from '../MessageInputFlat';
-import EditMessageForm from '../EditMessageForm';
-import { Chat } from '../../Chat';
-import { Channel } from '../../Channel';
+import { ChatContext } from '../../../context';
 import {
   generateChannel,
   generateMember,
@@ -23,7 +19,13 @@ import {
   getTestClientWithUser,
   useMockedApis,
 } from '../../../mock-builders';
-import { ChatContext } from '../../../context';
+import { Channel } from '../../Channel';
+import { Chat } from '../../Chat';
+import EditMessageForm from '../EditMessageForm';
+import MessageInput from '../MessageInput';
+import MessageInputFlat from '../MessageInputFlat';
+import MessageInputLarge from '../MessageInputLarge';
+import MessageInputSmall from '../MessageInputSmall';
 
 // mock image loader fn used by ImagePreview
 jest.mock('blueimp-load-image/js/load-image-fetch', () =>

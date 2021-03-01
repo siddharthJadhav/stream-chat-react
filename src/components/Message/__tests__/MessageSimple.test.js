@@ -1,6 +1,11 @@
 import React from 'react';
+
 import { act, cleanup, fireEvent, render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
+import Dayjs from 'dayjs';
+import calendar from 'dayjs/plugin/calendar';
+
 import {
   emojiMockConfig,
   generateChannel,
@@ -9,20 +14,19 @@ import {
   generateUser,
   getTestClientWithUser,
 } from 'mock-builders';
-import { MESSAGE_ACTIONS } from '../utils';
+
 import { ChannelContext, TranslationContext } from '../../../context';
-import { MessageSimple } from '../MessageSimple';
-import { Modal as ModalMock } from '../../Modal';
 import { Avatar as AvatarMock } from '../../Avatar';
-import { MML as MMLMock } from '../../MML';
-import { MessageOptions as MessageOptionsMock } from '../MessageOptions';
-import { MessageText as MessageTextMock } from '../MessageText';
 import {
   EditMessageForm,
   MessageInput as MessageInputMock,
 } from '../../MessageInput';
-import Dayjs from 'dayjs';
-import calendar from 'dayjs/plugin/calendar';
+import { MML as MMLMock } from '../../MML';
+import { Modal as ModalMock } from '../../Modal';
+import { MessageOptions as MessageOptionsMock } from '../MessageOptions';
+import { MessageSimple } from '../MessageSimple';
+import { MessageText as MessageTextMock } from '../MessageText';
+import { MESSAGE_ACTIONS } from '../utils';
 
 Dayjs.extend(calendar);
 

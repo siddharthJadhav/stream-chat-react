@@ -1,7 +1,8 @@
 // eslint-disable-next-line no-undef
+const Dayjs = require('dayjs');
+// eslint-disable-next-line no-undef
 const { StreamChat } = require('stream-chat');
 // eslint-disable-next-line no-undef
-const Dayjs = require('dayjs');
 
 export const client = StreamChat.getInstance('qk4nn7rpcn75');
 

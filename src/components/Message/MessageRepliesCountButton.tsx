@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
-import { TranslationContext } from '../../context';
-import { ReplyIcon } from './icons';
+
 import type { TranslationContextValue } from 'types';
+
+import { ReplyIcon } from './icons';
+
+import { TranslationContext } from '../../context';
 
 export interface MessageRepliesCountButtonProps
   extends TranslationContextValue {

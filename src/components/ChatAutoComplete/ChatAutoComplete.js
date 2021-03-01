@@ -1,14 +1,14 @@
 import React, { useCallback, useContext, useMemo } from 'react';
+
 import debounce from 'lodash.debounce';
 import PropTypes from 'prop-types';
 
+import { ChannelContext } from '../../context';
 import { AutoCompleteTextarea } from '../AutoCompleteTextarea';
 import { CommandItem } from '../CommandItem';
 import { EmoticonItem } from '../EmoticonItem';
 import { LoadingIndicator } from '../Loading';
 import { UserItem } from '../UserItem';
-
-import { ChannelContext } from '../../context';
 
 /** @type {React.FC<import("types").ChatAutoCompleteProps>} */
 const ChatAutoComplete = (props) => {

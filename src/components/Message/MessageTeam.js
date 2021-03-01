@@ -1,23 +1,7 @@
 import React, { useContext, useMemo, useRef } from 'react';
+
 import PropTypes from 'prop-types';
 
-import { MessageRepliesCountButton } from './MessageRepliesCountButton';
-import { isOnlyEmojis, renderText, smartRender } from '../../utils';
-import { ChannelContext, TranslationContext } from '../../context';
-import { Attachment as DefaultAttachment } from '../Attachment';
-import { Avatar as DefaultAvatar } from '../Avatar';
-import { MML } from '../MML';
-import {
-  EditMessageForm as DefaultEditMessageForm,
-  MessageInput,
-} from '../MessageInput';
-import { MessageActions } from '../MessageActions';
-import { Tooltip } from '../Tooltip';
-import { LoadingIndicator } from '../Loading';
-import {
-  ReactionSelector as DefaultReactionSelector,
-  SimpleReactionsList as DefaultReactionsList,
-} from '../Reactions';
 import {
   useActionHandler,
   useEditHandler,
@@ -29,7 +13,6 @@ import {
   useUserHandler,
   useUserRole,
 } from './hooks';
-import { areMessagePropsEqual, getReadByTooltipText } from './utils';
 import {
   PinIndicator as DefaultPinIndicator,
   DeliveredCheckIcon,
@@ -37,7 +20,26 @@ import {
   ReactionIcon,
   ThreadIcon,
 } from './icons';
+import { MessageRepliesCountButton } from './MessageRepliesCountButton';
 import { MessageTimestamp } from './MessageTimestamp';
+import { areMessagePropsEqual, getReadByTooltipText } from './utils';
+
+import { ChannelContext, TranslationContext } from '../../context';
+import { isOnlyEmojis, renderText, smartRender } from '../../utils';
+import { Attachment as DefaultAttachment } from '../Attachment';
+import { Avatar as DefaultAvatar } from '../Avatar';
+import { LoadingIndicator } from '../Loading';
+import { MessageActions } from '../MessageActions';
+import {
+  EditMessageForm as DefaultEditMessageForm,
+  MessageInput,
+} from '../MessageInput';
+import { MML } from '../MML';
+import {
+  ReactionSelector as DefaultReactionSelector,
+  SimpleReactionsList as DefaultReactionsList,
+} from '../Reactions';
+import { Tooltip } from '../Tooltip';
 
 /**
  * MessageTeam - Render component, should be used together with the Message component

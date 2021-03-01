@@ -1,8 +1,3 @@
-import {
-  RetrySendMessage,
-  useChannelContext,
-} from '../../../context/ChannelContext';
-
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -13,6 +8,10 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import {
+  RetrySendMessage,
+  useChannelContext,
+} from '../../../context/ChannelContext';
 
 export const useRetryHandler = <
   At extends UnknownType = DefaultAttachmentType,

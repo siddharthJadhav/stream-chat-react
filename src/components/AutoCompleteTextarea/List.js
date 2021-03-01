@@ -1,9 +1,9 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 
-import { TranslationContext } from '../../context/TranslationContext';
-
 import Item from './Item';
 import { KEY_CODES } from './listener';
+
+import { TranslationContext } from '../../context/TranslationContext';
 
 const List = (props) => {
   const {

@@ -1,6 +1,9 @@
 import React from 'react';
+
 import testRenderer from 'react-test-renderer';
+
 import { fireEvent, render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
 import {
   emojiMockConfig,
@@ -10,9 +13,10 @@ import {
   generateUser,
   getTestClientWithUser,
 } from 'mock-builders';
+
 import { ChannelContext, TranslationContext } from '../../../context';
-import { MessageText } from '../MessageText';
 import { MessageOptions as MessageOptionsMock } from '../MessageOptions';
+import { MessageText } from '../MessageText';
 
 jest.mock('../MessageOptions', () => ({
   MessageOptions: jest.fn(() => <div />),

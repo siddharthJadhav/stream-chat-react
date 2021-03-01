@@ -1,5 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
+
 import { generateMessage, generateUser } from 'mock-builders';
+
 import { useUserHandler } from '../useUserHandler';
 
 const mouseEventMock = {

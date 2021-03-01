@@ -1,4 +1,5 @@
 import { generateMessage, generateReaction, generateUser } from 'mock-builders';
+
 import {
   areMessagePropsEqual,
   getImages,

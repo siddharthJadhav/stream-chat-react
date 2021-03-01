@@ -1,10 +1,14 @@
 import React from 'react';
+
 import testRenderer from 'react-test-renderer';
+
 import { act, cleanup, fireEvent, render } from '@testing-library/react';
+
 import { generateMessage } from 'mock-builders';
+
 import { ChannelContext, TranslationContext } from '../../../context';
-import MessageActionsBoxMock from '../MessageActionsBox';
 import { MessageActions } from '../MessageActions';
+import MessageActionsBoxMock from '../MessageActionsBox';
 
 jest.mock('../MessageActionsBox', () => jest.fn(() => <div />));
 

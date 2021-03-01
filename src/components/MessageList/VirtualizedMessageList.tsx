@@ -1,4 +1,5 @@
 import React, { useCallback, useContext, useMemo, useRef } from 'react';
+
 import {
   Components,
   ScrollSeekConfiguration,
@@ -6,8 +7,15 @@ import {
   Virtuoso,
   VirtuosoHandle,
 } from 'react-virtuoso';
+
 import type { MessageResponse, StreamChat } from 'stream-chat';
 import type { EventComponentProps, TypingIndicatorProps } from 'types';
+
+import { useNewMessageNotification } from './hooks/useNewMessageNotification';
+import { usePrependedMessagesCount } from './hooks/usePrependMessagesCount';
+import { useShouldForceScrollToBottom } from './hooks/useShouldForceScrollToBottom';
+import { MessageNotification } from './MessageNotification';
+
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -35,10 +43,6 @@ import {
   FixedHeightMessageProps,
   MessageDeletedProps,
 } from '../Message';
-import { useNewMessageNotification } from './hooks/useNewMessageNotification';
-import { usePrependedMessagesCount } from './hooks/usePrependMessagesCount';
-import { useShouldForceScrollToBottom } from './hooks/useShouldForceScrollToBottom';
-import { MessageNotification } from './MessageNotification';
 
 export interface VirtualizedMessageListProps<
   At extends UnknownType = DefaultAttachmentType,

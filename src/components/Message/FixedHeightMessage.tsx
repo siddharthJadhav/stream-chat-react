@@ -1,19 +1,10 @@
 import React, { useCallback, useMemo } from 'react';
 
+import type { MessageResponse, TranslationLanguages } from 'stream-chat';
+
 import { useActionHandler, useUserRole } from './hooks';
 import { MessageTimestamp } from './MessageTimestamp';
 import { getMessageActions } from './utils';
-
-import { Avatar } from '../Avatar';
-import { Gallery } from '../Gallery';
-import { MessageActions } from '../MessageActions';
-import { MML } from '../MML';
-
-import { useChatContext } from '../../context/ChatContext';
-import { useTranslationContext } from '../../context/TranslationContext';
-import { renderText } from '../../utils';
-
-import type { MessageResponse, TranslationLanguages } from 'stream-chat';
 
 import type {
   DefaultAttachmentType,
@@ -25,6 +16,13 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import { useChatContext } from '../../context/ChatContext';
+import { useTranslationContext } from '../../context/TranslationContext';
+import { renderText } from '../../utils';
+import { Avatar } from '../Avatar';
+import { Gallery } from '../Gallery';
+import { MessageActions } from '../MessageActions';
+import { MML } from '../MML';
 
 const selectColor = (number: number, dark: boolean) => {
   const hue = number * 137.508; // use golden angle approximation

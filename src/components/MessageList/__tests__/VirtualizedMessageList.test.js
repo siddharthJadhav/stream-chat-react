@@ -1,6 +1,8 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
+
 import renderer from 'react-test-renderer';
+
+import { cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import {
@@ -12,12 +14,10 @@ import {
   getTestClientWithUser,
   useMockedApis,
 } from '../../../mock-builders';
-
-import { VirtualizedMessageList } from '../VirtualizedMessageList';
-import { usePrependedMessagesCount } from '../hooks/usePrependMessagesCount';
-
-import { Chat } from '../../Chat';
 import { Channel } from '../../Channel';
+import { Chat } from '../../Chat';
+import { usePrependedMessagesCount } from '../hooks/usePrependMessagesCount';
+import { VirtualizedMessageList } from '../VirtualizedMessageList';
 
 jest.mock('react-virtuoso', () => {
   const { Virtuoso } = jest.requireActual('react-virtuoso');

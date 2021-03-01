@@ -1,10 +1,6 @@
 import { useEffect } from 'react';
+
 import uniqBy from 'lodash.uniqby';
-
-import { getChannel } from '../utils';
-
-import { useChatContext } from '../../../context/ChatContext';
-
 import type { Channel, Event } from 'stream-chat';
 
 import type {
@@ -17,6 +13,8 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { useChatContext } from '../../../context/ChatContext';
+import { getChannel } from '../utils';
 
 export const useNotificationAddedToChannelListener = <
   At extends UnknownType = DefaultAttachmentType,

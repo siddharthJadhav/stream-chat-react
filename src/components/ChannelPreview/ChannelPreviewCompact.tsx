@@ -1,10 +1,6 @@
 import React, { useRef } from 'react';
 
-import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar/Avatar';
-
 import type { Channel } from 'stream-chat';
-
-import type { ChatContextValue } from '../../context/ChatContext';
 
 import type {
   DefaultAttachmentType,
@@ -16,6 +12,8 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import type { ChatContextValue } from '../../context/ChatContext';
+import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar/Avatar';
 
 export type ChannelPreviewCompactProps<
   At extends UnknownType = DefaultAttachmentType,

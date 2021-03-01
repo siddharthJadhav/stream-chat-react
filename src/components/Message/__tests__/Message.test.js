@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { cleanup, render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
 import {
   generateChannel,
@@ -8,13 +10,14 @@ import {
   generateUser,
   getTestClientWithUser,
 } from 'mock-builders';
+
 import {
   ChannelContext,
   ChatContext,
   TranslationContext,
 } from '../../../context';
-import { MESSAGE_ACTIONS } from '../utils';
 import { Message } from '../Message';
+import { MESSAGE_ACTIONS } from '../utils';
 
 const alice = generateUser({
   id: 'alice',

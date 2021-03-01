@@ -1,8 +1,11 @@
 // @ts-check
 import React, { useContext, useMemo, useState } from 'react';
+
 import PropTypes from 'prop-types';
-import { TranslationContext } from '../../context';
+
 import ModalWrapper from './ModalWrapper';
+
+import { TranslationContext } from '../../context';
 
 /**
  * Gallery - displays up to 4 images in a simple responsive grid with a lightbox to view the images.

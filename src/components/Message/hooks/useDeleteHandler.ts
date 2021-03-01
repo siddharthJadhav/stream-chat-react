@@ -1,6 +1,5 @@
-import { useChannelContext } from '../../../context/ChannelContext';
-
 import type { MouseEvent } from 'react';
+
 import type { MessageResponse } from 'stream-chat';
 
 import type {
@@ -13,6 +12,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { useChannelContext } from '../../../context/ChannelContext';
 
 export type DeleteHandlerReturnType = (
   event: MouseEvent<HTMLElement>,

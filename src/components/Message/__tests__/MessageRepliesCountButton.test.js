@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { cleanup, fireEvent, render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
-import { MessageRepliesCountButton } from '../MessageRepliesCountButton';
 import { TranslationContext } from '../../../context';
+import { MessageRepliesCountButton } from '../MessageRepliesCountButton';
 
 const onClickMock = jest.fn();
 

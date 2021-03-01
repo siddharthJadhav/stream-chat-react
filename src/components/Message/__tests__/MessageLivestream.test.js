@@ -1,6 +1,10 @@
 import React from 'react';
+
 import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
+import Dayjs from 'dayjs';
+
 import {
   emojiMockConfig,
   generateChannel,
@@ -10,12 +14,11 @@ import {
   getTestClientWithUser,
 } from 'mock-builders';
 
-import MessageLivestream from '../MessageLivestream';
-import { Avatar as AvatarMock } from '../../Avatar';
-import { MessageInput as MessageInputMock } from '../../MessageInput';
-import { MessageActions as MessageActionsMock } from '../../MessageActions';
 import { ChannelContext, TranslationContext } from '../../../context';
-import Dayjs from 'dayjs';
+import { Avatar as AvatarMock } from '../../Avatar';
+import { MessageActions as MessageActionsMock } from '../../MessageActions';
+import { MessageInput as MessageInputMock } from '../../MessageInput';
+import MessageLivestream from '../MessageLivestream';
 
 jest.mock('../../Avatar', () => ({
   Avatar: jest.fn(() => <div />),

@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { useChatContext } from '../../context/ChatContext';
-import { smartRender } from '../../utils';
+import type {
+  Channel,
+  ChannelFilters,
+  ChannelOptions,
+  ChannelSort,
+  Event,
+} from 'stream-chat';
 
 import { ChannelListTeam, ChannelListTeamProps } from './ChannelListTeam';
 import { useChannelDeletedListener } from './hooks/useChannelDeletedListener';
@@ -19,6 +24,18 @@ import { usePaginatedChannels } from './hooks/usePaginatedChannels';
 import { useUserPresenceChangedListener } from './hooks/useUserPresenceChangedListener';
 import { MAX_QUERY_CHANNELS_LIMIT, moveChannelUp } from './utils';
 
+import type {
+  DefaultAttachmentType,
+  DefaultChannelType,
+  DefaultCommandType,
+  DefaultEventType,
+  DefaultMessageType,
+  DefaultReactionType,
+  DefaultUserType,
+  UnknownType,
+} from '../../../types/types';
+import { useChatContext } from '../../context/ChatContext';
+import { smartRender } from '../../utils';
 import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar/Avatar';
 import {
   ChannelPreview,
@@ -30,32 +47,12 @@ import {
   EmptyStateIndicator as DefaultEmptyStateIndicator,
   EmptyStateIndicatorProps,
 } from '../EmptyStateIndicator';
+import type { InfiniteScrollPaginatorProps } from '../InfiniteScrollPaginator/InfiniteScrollPaginator';
 import { LoadingChannels } from '../Loading/LoadingChannels';
 import {
   LoadMorePaginator,
   LoadMorePaginatorProps,
 } from '../LoadMore/LoadMorePaginator';
-
-import type {
-  Channel,
-  ChannelFilters,
-  ChannelOptions,
-  ChannelSort,
-  Event,
-} from 'stream-chat';
-
-import type { InfiniteScrollPaginatorProps } from '../InfiniteScrollPaginator/InfiniteScrollPaginator';
-
-import type {
-  DefaultAttachmentType,
-  DefaultChannelType,
-  DefaultCommandType,
-  DefaultEventType,
-  DefaultMessageType,
-  DefaultReactionType,
-  DefaultUserType,
-  UnknownType,
-} from '../../../types/types';
 
 const DEFAULT_FILTERS = {};
 const DEFAULT_OPTIONS = {};

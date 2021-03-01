@@ -1,9 +1,4 @@
 import React from 'react';
-import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar';
-
-import { useChannelContext } from '../../context/ChannelContext';
-import { useChatContext } from '../../context/ChatContext';
-import { useTranslationContext } from '../../context/TranslationContext';
 
 import type {
   DefaultAttachmentType,
@@ -15,6 +10,10 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import { useChannelContext } from '../../context/ChannelContext';
+import { useChatContext } from '../../context/ChatContext';
+import { useTranslationContext } from '../../context/TranslationContext';
+import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar';
 
 export type ChannelHeaderProps = {
   /**

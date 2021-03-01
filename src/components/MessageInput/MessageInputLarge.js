@@ -1,22 +1,25 @@
 // @ts-check
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+
 import {
   FileUploadButton,
   ImageDropzone,
   // @ts-expect-error
 } from 'react-file-utils';
 
-import { ChannelContext, TranslationContext } from '../../context';
-import { ChatAutoComplete } from '../ChatAutoComplete';
-import { Tooltip } from '../Tooltip';
-import useMessageInput from './hooks/messageInput';
+import PropTypes from 'prop-types';
+
 import EmojiPicker from './EmojiPicker';
-import UploadsPreview from './UploadsPreview';
+import useMessageInput from './hooks/messageInput';
 import DefaultSendButton, {
   EmojiIconSmall as DefaultEmojiIcon,
   FileUploadIcon as DefaultFileUploadIcon,
 } from './icons';
+import UploadsPreview from './UploadsPreview';
+
+import { ChannelContext, TranslationContext } from '../../context';
+import { ChatAutoComplete } from '../ChatAutoComplete';
+import { Tooltip } from '../Tooltip';
 
 /** @type {React.FC<import("types").MessageInputProps>} */
 const MessageInputLarge = (props) => {

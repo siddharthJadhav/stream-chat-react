@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { act, renderHook } from '@testing-library/react-hooks';
+
 import {
   generateChannel,
   generateMessage,
@@ -7,6 +9,7 @@ import {
   generateUser,
   getTestClientWithUser,
 } from 'mock-builders';
+
 import { ChannelContext, ChatContext } from '../../../../context';
 import {
   reactionHandlerWarning,

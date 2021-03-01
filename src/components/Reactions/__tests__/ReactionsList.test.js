@@ -1,10 +1,14 @@
 import React from 'react';
+
 import { render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
-import { emojiMockConfig, generateReaction } from 'mock-builders';
 import EmojiComponentMock from 'emoji-mart/dist-modern/components/emoji/nimble-emoji';
-import ReactionsList from '../ReactionsList';
+
+import { emojiMockConfig, generateReaction } from 'mock-builders';
+
 import { ChannelContext } from '../../../context';
+import ReactionsList from '../ReactionsList';
 
 jest.mock('emoji-mart/dist-modern/components/emoji/nimble-emoji', () =>
   jest.fn(({ emoji }) => <div data-testid={`emoji-${emoji.id}`} />),

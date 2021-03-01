@@ -1,8 +1,9 @@
 import React, { useCallback, useContext, useState } from 'react';
+
 import PropTypes from 'prop-types';
 
-import { MESSAGE_ACTIONS } from '../Message/utils';
 import { TranslationContext } from '../../context';
+import { MESSAGE_ACTIONS } from '../Message/utils';
 
 /** @type {React.FC<import("types").MessageActionsBoxProps>} */
 const MessageActionsBox = ({

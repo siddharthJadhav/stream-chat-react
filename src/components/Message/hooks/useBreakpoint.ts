@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import throttle from 'lodash.throttle';
 
 export type DeviceWidth = {

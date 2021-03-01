@@ -1,12 +1,6 @@
 import React, { useRef } from 'react';
 
-import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar';
-
-import { truncate } from '../../utils';
-
 import type { Channel } from 'stream-chat';
-
-import type { ChatContextValue } from '../../context/ChatContext';
 
 import type {
   DefaultAttachmentType,
@@ -18,6 +12,9 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import type { ChatContextValue } from '../../context/ChatContext';
+import { truncate } from '../../utils';
+import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar';
 
 export type ChannelPreviewLastMessageProps<
   At extends UnknownType = DefaultAttachmentType,

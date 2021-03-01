@@ -1,24 +1,7 @@
 import React, { useContext, useRef } from 'react';
-import { MessageRepliesCountButton } from './MessageRepliesCountButton';
-import { smartRender } from '../../utils';
-import { ChannelContext, TranslationContext } from '../../context';
-import { Attachment as DefaultAttachment } from '../Attachment';
-import { Avatar as DefaultAvatar } from '../Avatar';
-import { MML } from '../MML';
-import { Modal } from '../Modal';
-import {
-  EditMessageForm as DefaultEditMessageForm,
-  MessageInput,
-} from '../MessageInput';
-import { Tooltip } from '../Tooltip';
-import { LoadingIndicator } from '../Loading';
-import {
-  ReactionsList as DefaultReactionList,
-  ReactionSelector as DefaultReactionSelector,
-} from '../Reactions';
-import { MessageOptions } from './MessageOptions';
-import { MessageText } from './MessageText';
-import { MessageDeleted as DefaultMessageDeleted } from './MessageDeleted';
+
+import type { MessageUIComponentProps } from 'types';
+
 import {
   useActionHandler,
   useOpenThreadHandler,
@@ -28,14 +11,18 @@ import {
   useUserHandler,
   useUserRole,
 } from './hooks';
+import { DeliveredCheckIcon } from './icons';
+import { MessageDeleted as DefaultMessageDeleted } from './MessageDeleted';
+import { MessageOptions } from './MessageOptions';
+import { MessageRepliesCountButton } from './MessageRepliesCountButton';
+import { MessageText } from './MessageText';
+import { MessageTimestamp } from './MessageTimestamp';
 import {
   areMessagePropsEqual,
   getReadByTooltipText,
   messageHasAttachments,
   messageHasReactions,
 } from './utils';
-import { DeliveredCheckIcon } from './icons';
-import { MessageTimestamp } from './MessageTimestamp';
 
 import type {
   DefaultAttachmentType,
@@ -47,7 +34,22 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
-import type { MessageUIComponentProps } from 'types';
+import { ChannelContext, TranslationContext } from '../../context';
+import { smartRender } from '../../utils';
+import { Attachment as DefaultAttachment } from '../Attachment';
+import { Avatar as DefaultAvatar } from '../Avatar';
+import { LoadingIndicator } from '../Loading';
+import {
+  EditMessageForm as DefaultEditMessageForm,
+  MessageInput,
+} from '../MessageInput';
+import { MML } from '../MML';
+import { Modal } from '../Modal';
+import {
+  ReactionsList as DefaultReactionList,
+  ReactionSelector as DefaultReactionSelector,
+} from '../Reactions';
+import { Tooltip } from '../Tooltip';
 
 export interface MessageSimpleProps<
   At extends UnknownType = DefaultAttachmentType,

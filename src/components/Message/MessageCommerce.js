@@ -1,21 +1,7 @@
 import React, { useRef } from 'react';
+
 import PropTypes from 'prop-types';
-import { smartRender } from '../../utils';
-import { Attachment as DefaultAttachment } from '../Attachment';
-import { Avatar as DefaultAvatar } from '../Avatar';
-import { MML } from '../MML';
-import {
-  ReactionSelector as DefaultReactionSelector,
-  ReactionsList as DefaultReactionsList,
-} from '../Reactions';
-import { MessageRepliesCountButton } from './MessageRepliesCountButton';
-import {
-  areMessagePropsEqual,
-  messageHasAttachments,
-  messageHasReactions,
-} from './utils';
-import { MessageOptions } from './MessageOptions';
-import { MessageText } from './MessageText';
+
 import {
   useActionHandler,
   useOpenThreadHandler,
@@ -24,7 +10,24 @@ import {
   useUserHandler,
   useUserRole,
 } from './hooks';
+import { MessageOptions } from './MessageOptions';
+import { MessageRepliesCountButton } from './MessageRepliesCountButton';
+import { MessageText } from './MessageText';
 import { MessageTimestamp } from './MessageTimestamp';
+import {
+  areMessagePropsEqual,
+  messageHasAttachments,
+  messageHasReactions,
+} from './utils';
+
+import { smartRender } from '../../utils';
+import { Attachment as DefaultAttachment } from '../Attachment';
+import { Avatar as DefaultAvatar } from '../Avatar';
+import { MML } from '../MML';
+import {
+  ReactionSelector as DefaultReactionSelector,
+  ReactionsList as DefaultReactionsList,
+} from '../Reactions';
 
 /**
  * MessageCommerce - Render component, should be used together with the Message component

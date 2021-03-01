@@ -1,6 +1,16 @@
 import React, { useCallback, useContext } from 'react';
 
-import { MessageSimple } from './MessageSimple';
+import type {
+  Channel,
+  ChannelMemberResponse,
+  Message as ClientMessage,
+  MessageResponse,
+  Mute,
+  User,
+  UserResponse,
+} from 'stream-chat';
+import type { MessageProps, TranslationContextValue } from 'types';
+
 import {
   PinPermissions,
   useActionHandler,
@@ -16,14 +26,13 @@ import {
   useUserHandler,
   useUserRole,
 } from './hooks';
+import { MessageSimple } from './MessageSimple';
 import {
   areMessagePropsEqual,
   defaultPinPermissions,
   getMessageActions,
   MESSAGE_ACTIONS,
 } from './utils';
-
-import { ChannelContext } from '../../context';
 
 import type {
   DefaultAttachmentType,
@@ -35,16 +44,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
-import type { MessageProps, TranslationContextValue } from 'types';
-import type {
-  Channel,
-  ChannelMemberResponse,
-  Message as ClientMessage,
-  MessageResponse,
-  Mute,
-  User,
-  UserResponse,
-} from 'stream-chat';
+import { ChannelContext } from '../../context';
 
 export interface MessageComponentProps<
   At extends UnknownType = DefaultAttachmentType,

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { act, cleanup, render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -12,10 +13,9 @@ import {
   getTestClientWithUser,
   useMockedApis,
 } from '../../../mock-builders';
-
+import { Channel } from '../../Channel';
 import { Chat } from '../../Chat';
 import { MessageList } from '../MessageList';
-import { Channel } from '../../Channel';
 
 describe('MessageList', () => {
   afterEach(cleanup);

@@ -1,12 +1,14 @@
 import React from 'react';
-import { cleanup, render, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
+
+import { cleanup, render, waitFor } from '@testing-library/react';
+
+import '@testing-library/jest-dom';
+
 import { getTestClientWithUser } from 'mock-builders';
 
-import { ChannelListTeam } from '../ChannelListTeam';
-
 import { ChatContext } from '../../../context';
+import { ChannelListTeam } from '../ChannelListTeam';
 
 // Weird hack to avoid big warnings
 // Maybe better to find a better solution for it.

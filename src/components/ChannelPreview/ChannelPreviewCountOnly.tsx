@@ -2,8 +2,6 @@ import React from 'react';
 
 import type { Channel } from 'stream-chat';
 
-import type { ChatContextValue } from '../../context/ChatContext';
-
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -14,6 +12,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import type { ChatContextValue } from '../../context/ChatContext';
 
 export type ChannelPreviewCountOnlyProps<
   At extends UnknownType = DefaultAttachmentType,

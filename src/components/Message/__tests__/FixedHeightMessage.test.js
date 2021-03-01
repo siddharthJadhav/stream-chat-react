@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { cleanup, render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
 import {
   generateChannel,
@@ -8,16 +10,16 @@ import {
   getTestClientWithUser,
 } from 'mock-builders';
 
-import { FixedHeightMessage } from '../FixedHeightMessage';
 import {
   ChannelContext,
   ChatContext,
   TranslationContext,
 } from '../../../context';
 import { Avatar as AvatarMock } from '../../Avatar';
-import { MML as MMLMock } from '../../MML';
 import { Gallery as GalleryMock } from '../../Gallery';
 import { MessageActions as MessageActionsMock } from '../../MessageActions';
+import { MML as MMLMock } from '../../MML';
+import { FixedHeightMessage } from '../FixedHeightMessage';
 
 jest.mock('../../Avatar', () => ({ Avatar: jest.fn(() => <div />) }));
 jest.mock('../../MML', () => ({ MML: jest.fn(() => <div />) }));

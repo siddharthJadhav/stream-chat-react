@@ -6,11 +6,12 @@ import React, {
   useRef,
   useState,
 } from 'react';
+
 import PropTypes from 'prop-types';
 
+import { ChannelContext } from '../../context';
 import { Avatar as DefaultAvatar } from '../Avatar';
 import { getStrippedEmojiData } from '../Channel/emojiData';
-import { ChannelContext } from '../../context';
 
 /** @type {React.ForwardRefRenderFunction<HTMLDivElement | null, import("types").ReactionSelectorProps>} */
 const ReactionSelectorWithRef = (

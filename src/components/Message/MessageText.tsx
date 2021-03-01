@@ -1,5 +1,17 @@
 import React, { useContext, useMemo, useRef } from 'react';
+
 import type { TranslationLanguages } from 'stream-chat';
+
+import {
+  useMentionsUIHandler,
+  useMobilePress,
+  useReactionClick,
+  useReactionHandler,
+} from './hooks';
+import { MessageOptions, MessageOptionsProps } from './MessageOptions';
+import type { MessageSimpleProps } from './MessageSimple';
+import { messageHasAttachments, messageHasReactions } from './utils';
+
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -16,15 +28,6 @@ import {
   ReactionsList as DefaultReactionList,
   ReactionSelector as DefaultReactionSelector,
 } from '../Reactions';
-import {
-  useMentionsUIHandler,
-  useMobilePress,
-  useReactionClick,
-  useReactionHandler,
-} from './hooks';
-import { MessageOptions, MessageOptionsProps } from './MessageOptions';
-import type { MessageSimpleProps } from './MessageSimple';
-import { messageHasAttachments, messageHasReactions } from './utils';
 
 export interface MessageTextProps<
   At extends UnknownType = DefaultAttachmentType,

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import renderer from 'react-test-renderer';
+
 import {
   act,
   cleanup,
@@ -9,8 +11,8 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import MML from '../MML';
 import { ChatContext } from '../../../context';
+import MML from '../MML';
 
 afterEach(cleanup); // eslint-disable-line
 

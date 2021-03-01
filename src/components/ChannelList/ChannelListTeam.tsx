@@ -1,12 +1,5 @@
 import React, { PropsWithChildren } from 'react';
 
-import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar';
-import { ChatDown, ChatDownProps } from '../ChatDown/ChatDown';
-import { LoadingChannels } from '../Loading/LoadingChannels';
-
-import chevrondown from '../../assets/str-chat__icon-chevron-down.svg';
-import { useChatContext } from '../../context/ChatContext';
-
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -17,6 +10,11 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import chevrondown from '../../assets/str-chat__icon-chevron-down.svg';
+import { useChatContext } from '../../context/ChatContext';
+import { AvatarProps, Avatar as DefaultAvatar } from '../Avatar';
+import { ChatDown, ChatDownProps } from '../ChatDown/ChatDown';
+import { LoadingChannels } from '../Loading/LoadingChannels';
 
 export type ChannelListTeamProps = {
   /**

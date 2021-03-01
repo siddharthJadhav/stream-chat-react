@@ -6,23 +6,9 @@ import React, {
   useRef,
   useState,
 } from 'react';
+
 import PropTypes from 'prop-types';
 
-import { MessageRepliesCountButton } from './MessageRepliesCountButton';
-
-import { isOnlyEmojis, renderText, smartRender } from '../../utils';
-import { ChannelContext, TranslationContext } from '../../context';
-
-import { Avatar as DefaultAvatar } from '../Avatar';
-import { Attachment as DefaultAttachment } from '../Attachment';
-import {
-  EditMessageForm as DefaultEditMessageForm,
-  MessageInput,
-} from '../MessageInput';
-import {
-  ReactionSelector as DefaultReactionSelector,
-  SimpleReactionsList as DefaultReactionsList,
-} from '../Reactions';
 import {
   useActionHandler,
   useEditHandler,
@@ -33,15 +19,29 @@ import {
   useRetryHandler,
   useUserHandler,
 } from './hooks';
-import { areMessagePropsEqual } from './utils';
-import { MessageActions } from '../MessageActions';
 import {
   PinIndicator as DefaultPinIndicator,
   ErrorIcon,
   ReactionIcon,
   ThreadIcon,
 } from './icons';
+import { MessageRepliesCountButton } from './MessageRepliesCountButton';
 import { MessageTimestamp } from './MessageTimestamp';
+import { areMessagePropsEqual } from './utils';
+
+import { ChannelContext, TranslationContext } from '../../context';
+import { isOnlyEmojis, renderText, smartRender } from '../../utils';
+import { Attachment as DefaultAttachment } from '../Attachment';
+import { Avatar as DefaultAvatar } from '../Avatar';
+import { MessageActions } from '../MessageActions';
+import {
+  EditMessageForm as DefaultEditMessageForm,
+  MessageInput,
+} from '../MessageInput';
+import {
+  ReactionSelector as DefaultReactionSelector,
+  SimpleReactionsList as DefaultReactionsList,
+} from '../Reactions';
 
 /**
  * MessageLivestream - Render component, should be used together with the Message component

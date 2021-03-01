@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { renderHook } from '@testing-library/react-hooks';
+
 import { generateMessage } from 'mock-builders';
+
 import { ChannelContext } from '../../../../context';
 import { useOpenThreadHandler } from '../useOpenThreadHandler';
 

@@ -1,12 +1,15 @@
 // @ts-check
 import React, { useContext } from 'react';
+
 import PropTypes from 'prop-types';
+
+import EmojiPicker from './EmojiPicker';
+import useMessageInput from './hooks/messageInput';
+import DefaultSendButton, { EmojiIconLarge as DefaultEmojiIcon } from './icons';
+
 import { TranslationContext } from '../../context';
 import { ChatAutoComplete } from '../ChatAutoComplete';
 import { Tooltip } from '../Tooltip';
-import useMessageInput from './hooks/messageInput';
-import EmojiPicker from './EmojiPicker';
-import DefaultSendButton, { EmojiIconLarge as DefaultEmojiIcon } from './icons';
 
 /** @type {React.FC<import("types").MessageInputProps>} */
 const MessageInputSimple = (props) => {

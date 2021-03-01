@@ -1,6 +1,14 @@
 import React, { PureComponent, RefObject } from 'react';
+
 import type { LoadingIndicator, TranslationContextValue } from 'types';
 import { v4 as uuidv4 } from 'uuid';
+
+import { Center } from './Center';
+import { ConnectionStatus } from './ConnectionStatus';
+import { CustomNotification } from './CustomNotification';
+import { MessageListInner, MessageListInnerProps } from './MessageListInner';
+import { MessageNotification } from './MessageNotification';
+
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -22,11 +30,6 @@ import { LoadingIndicator as DefaultLoadingIndicator } from '../Loading';
 import { MessageComponentProps, MessageSimple } from '../Message';
 import { defaultPinPermissions, MESSAGE_ACTIONS } from '../Message/utils';
 import { TypingIndicator as DefaultTypingIndicator } from '../TypingIndicator';
-import { Center } from './Center';
-import { ConnectionStatus } from './ConnectionStatus';
-import { CustomNotification } from './CustomNotification';
-import { MessageListInner, MessageListInnerProps } from './MessageListInner';
-import { MessageNotification } from './MessageNotification';
 
 type PropsDrilledToMessage =
   | 'Attachment'

@@ -1,9 +1,5 @@
-import { validateAndGetMessage } from '../utils';
-
-import { useChannelContext } from '../../../context/ChannelContext';
-import { useTranslationContext } from '../../../context/TranslationContext';
-
 import type { MouseEvent } from 'react';
+
 import type { MessageResponse, UpdatedMessage } from 'stream-chat';
 
 import type {
@@ -16,6 +12,9 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { useChannelContext } from '../../../context/ChannelContext';
+import { useTranslationContext } from '../../../context/TranslationContext';
+import { validateAndGetMessage } from '../utils';
 
 export type PinEnabledUserRoles = {
   [key: string]: boolean;

@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { MAX_QUERY_CHANNELS_LIMIT } from '../utils';
-
 import type {
   Channel,
   ChannelFilters,
@@ -20,6 +18,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import { MAX_QUERY_CHANNELS_LIMIT } from '../utils';
 
 export const usePaginatedChannels = <
   At extends UnknownType = DefaultAttachmentType,

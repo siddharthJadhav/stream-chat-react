@@ -1,11 +1,12 @@
 // @ts-check
 
 import React from 'react';
+
 import DefaultMedia from 'react-player';
+
 import PropTypes from 'prop-types';
 
 import DefaultAttachmentActions from './AttachmentActions';
-
 import DefaultAudio from './Audio';
 import DefaultCard from './Card';
 import DefaultFile from './FileAttachment';

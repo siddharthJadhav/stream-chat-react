@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
+
 import Dayjs from 'dayjs';
 import calendar from 'dayjs/plugin/calendar';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
-
-import { getDisplayName } from './utils/getDisplayName';
-
 import type { TFunction } from 'i18next';
 import type { TranslationLanguages } from 'stream-chat';
+
+import { getDisplayName } from './utils/getDisplayName';
 
 import type { UnknownType } from '../../types/types';
 

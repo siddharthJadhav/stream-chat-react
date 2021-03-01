@@ -1,5 +1,7 @@
 import React, { FC, useContext, useMemo } from 'react';
+
 import type { MessageResponse } from 'stream-chat';
+
 import {
   isDate,
   isDayjs,

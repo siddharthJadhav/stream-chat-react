@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { getNodeText } from '@testing-library/dom';
 import {
   act,
@@ -8,6 +9,8 @@ import {
   waitFor,
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
+
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   dispatchChannelDeletedEvent,
@@ -29,17 +32,15 @@ import {
   queryChannelsApi,
   useMockedApis,
 } from 'mock-builders';
-import { v4 as uuidv4 } from 'uuid';
 
 import { ChatContext } from '../../../context';
-import { Chat } from '../../Chat';
-
-import { ChannelList } from '../ChannelList';
 import {
   ChannelPreviewCompact,
   ChannelPreviewLastMessage,
   ChannelPreviewMessenger,
 } from '../../ChannelPreview';
+import { Chat } from '../../Chat';
+import { ChannelList } from '../ChannelList';
 
 /**
  * We are gonna use following custom UI components for preview and list.

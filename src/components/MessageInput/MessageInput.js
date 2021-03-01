@@ -1,4 +1,5 @@
 import React from 'react';
+
 import MessageInputLarge from './MessageInputLarge';
 
 const MessageInput = (props) => {

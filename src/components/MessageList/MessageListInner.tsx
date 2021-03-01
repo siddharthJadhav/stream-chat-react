@@ -1,20 +1,7 @@
 /* eslint-disable no-continue */
 import React, { RefObject, useMemo } from 'react';
+
 import isEqual from 'lodash.isequal';
-
-import { Message } from '../Message';
-import { InfiniteScroll } from '../InfiniteScrollPaginator';
-
-import type {
-  DefaultAttachmentType,
-  DefaultChannelType,
-  DefaultCommandType,
-  DefaultEventType,
-  DefaultMessageType,
-  DefaultReactionType,
-  DefaultUserType,
-  UnknownType,
-} from '../../../types/types';
 import type {
   Channel,
   MessageResponse,
@@ -28,6 +15,19 @@ import type {
   MessageProps,
   TypingIndicatorProps,
 } from 'types';
+
+import type {
+  DefaultAttachmentType,
+  DefaultChannelType,
+  DefaultCommandType,
+  DefaultEventType,
+  DefaultMessageType,
+  DefaultReactionType,
+  DefaultUserType,
+  UnknownType,
+} from '../../../types/types';
+import { InfiniteScroll } from '../InfiniteScrollPaginator';
+import { Message } from '../Message';
 
 export interface MessageListInnerProps<
   At extends UnknownType = DefaultAttachmentType,

@@ -1,12 +1,14 @@
 import React from 'react';
+
 import renderer from 'react-test-renderer';
+
+import { cleanup, render } from '@testing-library/react';
 import Dayjs from 'dayjs';
 import calendar from 'dayjs/plugin/calendar';
-import { cleanup, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import DateSeparator from '../DateSeparator';
 import { TranslationContext } from '../../../context';
+import DateSeparator from '../DateSeparator';
 
 Dayjs.extend(calendar);
 

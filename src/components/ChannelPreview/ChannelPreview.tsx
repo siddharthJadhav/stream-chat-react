@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from 'react';
 
+import type { Channel, Event, MessageResponse } from 'stream-chat';
+
+import type { ChannelPreviewCompactProps } from './ChannelPreviewCompact';
 import {
   ChannelPreviewCountOnly,
   ChannelPreviewCountOnlyProps,
 } from './ChannelPreviewCountOnly';
+import type { ChannelPreviewMessengerProps } from './ChannelPreviewMessenger';
 import {
   getDisplayImage,
   getDisplayTitle,
   getLatestMessagePreview,
 } from './utils';
-
-import { ChatContextValue, useChatContext } from '../../context/ChatContext';
-import { useTranslationContext } from '../../context/TranslationContext';
-
-import type { Channel, Event, MessageResponse } from 'stream-chat';
-
-import type { ChannelPreviewCompactProps } from './ChannelPreviewCompact';
-import type { ChannelPreviewMessengerProps } from './ChannelPreviewMessenger';
-
-import type { AvatarProps } from '../Avatar/Avatar';
 
 import type {
   DefaultAttachmentType,
@@ -30,6 +24,9 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import { ChatContextValue, useChatContext } from '../../context/ChatContext';
+import { useTranslationContext } from '../../context/TranslationContext';
+import type { AvatarProps } from '../Avatar/Avatar';
 
 export type ChannelPreviewUIComponentProps<
   At extends UnknownType = DefaultAttachmentType,

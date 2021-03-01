@@ -1,7 +1,5 @@
 import type { Channel, UserResponse } from 'stream-chat';
 
-import type { TranslationContextValue } from '../../context/TranslationContext';
-
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -12,6 +10,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import type { TranslationContextValue } from '../../context/TranslationContext';
 
 export const getLatestMessagePreview = <
   At extends UnknownType = DefaultAttachmentType,

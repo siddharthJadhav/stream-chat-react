@@ -1,16 +1,19 @@
 import React from 'react';
+
 import { renderHook } from '@testing-library/react-hooks';
+
 import {
   generateChannel,
   generateMessage,
   generateUser,
   getTestClientWithUser,
 } from 'mock-builders';
+
+import { ChannelContext, ChatContext } from '../../../../context';
 import {
   missingUseFlagHandlerParameterWarning,
   useFlagHandler,
 } from '../useFlagHandler';
-import { ChannelContext, ChatContext } from '../../../../context';
 
 const alice = generateUser({ name: 'alice' });
 const flagMessage = jest.fn();

@@ -1,13 +1,8 @@
 import React, { PropsWithChildren } from 'react';
 
-import { useChat } from './hooks/useChat';
-
-import { ChatProvider } from '../../context/ChatContext';
-import { TranslationProvider } from '../../context/TranslationContext';
-
 import type { StreamChat } from 'stream-chat';
 
-import type { Streami18n } from '../../i18n/Streami18n';
+import { useChat } from './hooks/useChat';
 
 import type {
   DefaultAttachmentType,
@@ -19,6 +14,9 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import { ChatProvider } from '../../context/ChatContext';
+import { TranslationProvider } from '../../context/TranslationContext';
+import type { Streami18n } from '../../i18n/Streami18n';
 
 export type Theme =
   | 'commerce dark'

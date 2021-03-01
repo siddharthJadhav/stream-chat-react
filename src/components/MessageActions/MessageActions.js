@@ -1,6 +1,8 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 
 import MessageActionsBox from './MessageActionsBox';
+
+import { ChatContext } from '../../context';
 import {
   useDeleteHandler,
   useFlagHandler,
@@ -9,8 +11,6 @@ import {
   useUserRole,
 } from '../Message/hooks';
 import { defaultPinPermissions, isUserMuted } from '../Message/utils';
-
-import { ChatContext } from '../../context';
 
 /**
  * @type { React.FC<import('types').MessageActionsProps> }

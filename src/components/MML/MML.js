@@ -1,7 +1,8 @@
 // @ts-check
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+
 import { MML as MMLReact } from 'mml-react';
+import PropTypes from 'prop-types';
 
 import { ChatContext } from '../../context';
 

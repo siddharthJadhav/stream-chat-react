@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from 'react';
+
 import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import ChatAutoComplete from '../ChatAutoComplete';
+import { ChatContext } from '../../../context';
 import {
   generateChannel,
   generateMember,
@@ -13,9 +14,9 @@ import {
   queryMembersApi,
   useMockedApis,
 } from '../../../mock-builders';
-import { Chat } from '../../Chat';
 import { Channel } from '../../Channel';
-import { ChatContext } from '../../../context';
+import { Chat } from '../../Chat';
+import ChatAutoComplete from '../ChatAutoComplete';
 
 let chatClient;
 let channel;

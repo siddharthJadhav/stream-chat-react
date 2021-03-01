@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { FileIcon } from 'react-file-utils';
+
 import prettybytes from 'pretty-bytes';
+
 import { SafeAnchor } from '../SafeAnchor';
 
 /** @type React.FC<import('types').FileAttachmentProps> */

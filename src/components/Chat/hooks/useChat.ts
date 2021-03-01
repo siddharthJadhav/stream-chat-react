@@ -1,14 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
+
 import Dayjs from 'dayjs';
-
-import { Streami18n } from '../../../i18n';
-
-import { version } from '../../../../package.json';
-
 import type { Channel, Event, Mute, StreamChat } from 'stream-chat';
 
-import type { TranslationContextValue } from '../../../context/TranslationContext';
-
+import { version } from '../../../../package.json';
 import type {
   DefaultAttachmentType,
   DefaultChannelType,
@@ -19,6 +14,8 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../../types/types';
+import type { TranslationContextValue } from '../../../context/TranslationContext';
+import { Streami18n } from '../../../i18n';
 
 export type UseChatParams<
   At extends UnknownType = DefaultAttachmentType,

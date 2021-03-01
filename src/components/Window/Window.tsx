@@ -1,7 +1,5 @@
 import React, { PropsWithChildren } from 'react';
 
-import { useChannelContext } from '../../context/ChannelContext';
-
 import type { MessageResponse } from 'stream-chat';
 
 import type {
@@ -13,6 +11,7 @@ import type {
   DefaultUserType,
   UnknownType,
 } from '../../../types/types';
+import { useChannelContext } from '../../context/ChannelContext';
 
 export type WindowProps<
   At extends UnknownType = DefaultAttachmentType,

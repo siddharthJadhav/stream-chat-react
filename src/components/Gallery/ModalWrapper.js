@@ -1,7 +1,10 @@
 // @ts-check
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import Carousel, { Modal, ModalGateway } from 'react-images';
+
+import PropTypes from 'prop-types';
+
 import ModalImage from './ModalImage';
 
 /**

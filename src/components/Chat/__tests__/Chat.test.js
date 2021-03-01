@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+
 import { act, cleanup, render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -7,11 +8,11 @@ import {
   getTestClient,
   getTestClientWithUser,
 } from 'mock-builders';
+
 import { Chat } from '..';
+import { version } from '../../../../package.json';
 import { ChatContext, TranslationContext } from '../../../context';
 import { Streami18n } from '../../../i18n';
-
-import { version } from '../../../../package.json';
 
 const ChatContextConsumer = ({ fn }) => {
   fn(useContext(ChatContext));

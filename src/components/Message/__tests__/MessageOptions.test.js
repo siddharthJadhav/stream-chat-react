@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { fireEvent, render } from '@testing-library/react';
+
 import '@testing-library/jest-dom';
 import {
   generateChannel,
@@ -7,10 +9,11 @@ import {
   generateUser,
   getTestClientWithUser,
 } from 'mock-builders';
+
 import { ChannelContext } from '../../../context';
 import { MessageActions as MessageActionsMock } from '../../MessageActions';
-import { MESSAGE_ACTIONS } from '../utils';
 import { MessageOptions } from '../MessageOptions';
+import { MESSAGE_ACTIONS } from '../utils';
 
 jest.mock('../../MessageActions', () => ({
   MessageActions: jest.fn(() => <div />),
